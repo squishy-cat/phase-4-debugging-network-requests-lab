@@ -63,11 +63,17 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  1. Submit form with console open --> see 500 error --> "Uninitialized constant ToysController::Toys"
+  2. Check controller file --> "Toys.create" should be "Toy.create"
+
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  1. Click like button --> see "Unexpected end of JSON input"
+  2. Check controller file --> see render json step missing --> add render json step
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  1. Spotted "Destroy" not available in routes, added "Destroy" as available 
